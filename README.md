@@ -1,17 +1,18 @@
 # MangasProject
 
-##Mini projet à faire pour consolider les bases : 
-###Nouveau projet Angular
+## Mini projet à faire pour consolider les bases : 
+### Nouveau projet Angular
 
 Créer un projet angular avec le ng new en choisissant de mettre le router (par défaut c'est non, donc faites attention) et d'être en css
 Créer un fichier src/app/entities.ts et dedans faire une interface Manga qui va reprendre la structure en dessous
 Créer un HomeComponent et faire une route racine qui pointe dessus
 
 **Affichage des mangas**
+
 **Generer:**
-HomeComponent, qui sera l'accueil
-MangaList qui affichera les mangas
-MangaDetails qui affichera un manga avec les details
+* HomeComponent, qui sera l'accueil
+* MangaList qui affichera les mangas
+* MangaDetails qui affichera un manga avec les details
 
 **Le service**
 
