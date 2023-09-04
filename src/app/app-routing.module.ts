@@ -7,7 +7,7 @@ import { MangaListComponent } from './manga-list/manga-list.component';
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'mangaList', component: MangaListComponent},
-  {path: 'mangalist/:id', component: MangaDetailsComponent},
+  {path: 'mangaList/:id', component: MangaDetailsComponent},
   
 ];
 

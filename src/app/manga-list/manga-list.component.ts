@@ -1,14 +1,30 @@
-import { Component } from '@angular/core';
-import { MANGAS } from '../mock-manga';
+import { Component, OnInit } from '@angular/core';
 import { IManga } from '../entities';
+import { MangaService } from '../manga.service';
 
 @Component({
   selector: 'app-manga-list',
   templateUrl: './manga-list.component.html',
   styleUrls: ['./manga-list.component.css']
 })
-export class MangaListComponent {
+export class MangaListComponent implements OnInit{
 
-  mangas: IManga[] = MANGAS;
+  mangas: IManga[] = [];
 
+  constructor(private mangaService: MangaService){}
+
+  ngOnInit(): void {
+
+    this.getMangas();
+    this.showManga(0);
+    
+  }
+  getMangas(){
+    this.mangas = this.mangaService.fetchAllMangas();
+    return this.mangas;
+  }
+
+  showManga(i: number){
+    return (this.mangaService.fetchById(i));
+  }
 }
