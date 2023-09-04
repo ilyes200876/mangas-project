@@ -1,27 +1,26 @@
 # MangasProject
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+##Mini projet à faire pour consolider les bases : 
+###Nouveau projet Angular
 
-## Development server
+Créer un projet angular avec le ng new en choisissant de mettre le router (par défaut c'est non, donc faites attention) et d'être en css
+Créer un fichier src/app/entities.ts et dedans faire une interface Manga qui va reprendre la structure en dessous
+Créer un HomeComponent et faire une route racine qui pointe dessus
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+**Affichage des mangas**
+**Generer:**
+HomeComponent, qui sera l'accueil
+MangaList qui affichera les mangas
+MangaDetails qui affichera un manga avec les details
 
-## Code scaffolding
+**Le service**
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Générer un service avec le cli (ng g s ) qui s'appelera MangaService.
+Créer une méthode fetchAll() qui va retourner tous les mangas
+Côté MangaList, on rajoute un constructeur avec une private MangaService 
+On ajoute une méthode getManga qui va utiliser la méthode fetchAll du manga service et qui va directement assigner la valeur  à la propriété mangas du Manga List Component
+On rajoute un bouton qui au click nous redirige vers mangaDetails
+Un autre bouton ajout qui rajoutera les mangas selectionnés dans un "panier" qui sera un nouveau tableau
+Avec le compoenet mangadetails créer une route paramétrée sur 'pokemons/:id' qui va pointer sur ce component
+Dans le MangaService, créer une méthode fetchOne qui va attendre un id:any en argument et s'en servir pour recuperer  l'id du manga dans le tableau d'objet  et qui va donc return un Manga. 
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
