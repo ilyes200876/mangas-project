@@ -8,6 +8,7 @@ import { MangaListComponent } from './manga-list/manga-list.component';
 import { MangaDetailsComponent } from './manga-details/manga-details.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { Error404Component } from './error404/error404.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FooterComponent } from './footer/footer.component';
     MangaListComponent,
     MangaDetailsComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    Error404Component
   ],
   imports: [
     BrowserModule,

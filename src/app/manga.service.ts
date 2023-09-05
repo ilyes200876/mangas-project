@@ -12,6 +12,10 @@ export class MangaService {
     return MANGAS;
   }
 
+  fetchByIndex(i: number){
+    return MANGAS[i];
+  }
+
   fetchById(i: number){
     return MANGAS[i];
   }

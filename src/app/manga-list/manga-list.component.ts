@@ -25,6 +25,6 @@ export class MangaListComponent implements OnInit{
   }
 
   showManga(i: number){
-    return (this.mangaService.fetchById(i));
+    return (this.mangaService.fetchByIndex(i));
   }
 }
